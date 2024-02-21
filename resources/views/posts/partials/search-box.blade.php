@@ -1,5 +1,5 @@
 <div x-data="{
-    query: ''
+    query: '{{request('search', '')}}'
 }" id="search-box">
     <div>
         <h3 class="text-lg font-semibold text-gray-900 mb-3">Search</h3>
