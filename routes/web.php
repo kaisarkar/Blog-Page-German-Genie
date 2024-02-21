@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //checking github
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
 Route::middleware([
     'auth:sanctum',
