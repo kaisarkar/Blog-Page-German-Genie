@@ -4,43 +4,13 @@
             <x-application-logo />
         </a>
         <div class="top-menu ml-10">
-            <ul class="flex space-x-4">
-                <li>
-                    <a class="flex space-x-2 items-center hover:text-yellow-900 text-sm text-yellow-500"
-                        href="http://localhost">
-                        Home
-                    </a>
-                </li>
+            <div class="flex space-x-4">
 
-                <li>
-                    <a class="flex space-x-2 items-center hover:text-yellow-500 text-sm text-gray-500"
-                        href="http://localhost/blog">
-                        Blog
-                    </a>
-                </li>
+                <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                    {{ __('Home') }}
+                </x-nav-link>
 
-                <li>
-                    <a class="flex space-x-2 items-center hover:text-yellow-500 text-sm text-gray-500"
-                        href="http://localhost/blog">
-                        About Us
-                    </a>
-                </li>
-
-                <li>
-                    <a class="flex space-x-2 items-center hover:text-yellow-500 text-sm text-gray-500"
-                        href="http://localhost/blog">
-                        Contact Us
-                    </a>
-                </li>
-
-                <li>
-                    <a class="flex space-x-2 items-center hover:text-yellow-500 text-sm text-gray-500"
-                        href="http://localhost/blog">
-                        Terms
-                    </a>
-                </li>
-
-            </ul>
+            </div>
         </div>
     </div>
     <div id="header-right" class="flex items-center md:space-x-6">
