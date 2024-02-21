@@ -5,13 +5,15 @@ namespace App\Livewire;
 use App\Models\Post;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class PostList extends Component
 {
+    use WithPagination;
 
     #[Computed()]
     public function posts(){
-        return Post::take(5)->get();
+        return Post::published()->orderBy('published_at', 'desc')->paginate(5);
     }
 
     public function render()
