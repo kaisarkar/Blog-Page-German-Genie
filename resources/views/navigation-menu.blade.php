@@ -10,10 +10,6 @@
                     {{ __('Home') }}
                 </x-nav-link>
 
-                <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                    {{ __('Blog') }}
-                </x-nav-link>
-
 
             </div>
         </div>
