@@ -27,11 +27,11 @@ class PostList extends Component
     public function updateSearch($search)
     {
         $this->search = $search;
-
     }
 
     #[Computed()]
-    public function posts(){
+    public function posts()
+    {
         return Post::published()->orderBy('published_at', $this->sort)->where('title', 'like', "%{$this->search}%")->paginate(5);
     }
 
