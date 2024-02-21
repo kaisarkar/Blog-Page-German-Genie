@@ -11,4 +11,9 @@
         @endforeach
 
     </div>
+
+    <div class="my-3">
+        {{ $this->posts->onEachSide(1)->links() }}
+    </div>
+
 </div>
