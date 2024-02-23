@@ -5,12 +5,13 @@
                 <button class="mr-3 text-xs gray-500" wire:click="clearFilters()">X</button>
             @endif
             @if ($this->activeCategory)
-            All post from:
-            <x-badge wire:navigate href="{{ route('posts.index', ['category' => $this->activeCategory->title]) }}"  :textColor="$this->activeCategory->text_color"
+            <x-badge wire:navigate href="{{ route('posts.index', ['category' => $this->activeCategory->slug]) }}"  :textColor="$this->activeCategory->text_color"
                 :bgColor="$this->activeCategory->bg_color">{{$this->activeCategory->title}}</x-badge>
             @endif
             @if ($search)
-            Containing: {{$search}}
+            <span class="ml-2">
+            containing: <strong>{{$search}}</strong>
+        </span>
             @endif
 
         </div>
