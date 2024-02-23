@@ -1,14 +1,8 @@
 <div>
     <h3 class="mb-3 text-lg font-semibold text-gray-900">Recommended Topics</h3>
     <div class="flex flex-wrap justify-start gap-2 topics">
-        @foreach ( $categories as $category )
-            <a href="#"
-                class="bg-red-600
-                        text-white
-                        rounded-xl px-3 py-1 text-base">
-            Tailwind</a>
-        {{-- <x-posts.category-badge :category="$category" /> --}}
+        @foreach ($categories as $category)
+        <x-badge>{{$category->title}}</x-badge>
         @endforeach
-
     </div>
 </div>
