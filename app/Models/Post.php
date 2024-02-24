@@ -68,6 +68,10 @@ class Post extends Model
 
         return ($mins < 1) ? 1 : $mins;
     }
+    public function likes()
+    {
+        return $this->belongsToMany(User::class, 'post_like')->withTimestamps();
+    }
 
     public function getThumbnailUrl()
     {
