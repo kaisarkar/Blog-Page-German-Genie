@@ -1,41 +1,17 @@
-<x-app-layout>
-    @section('hero')
-    <div class="w-full text-center py-32">
-        <h1 class="text-2xl md:text-3xl font-bold text-center lg:text-5xl text-gray-700">
-            Welcome to <span class="text-blue-500">German</span> <span class="text-gray-900"> Genie</span>
-        </h1>
-        <p class="text-gray-500 text-lg mt-1">Best Blog in the universe</p>
-        <a class="px-3 py-2 text-lg text-white bg-gray-800 rounded mt-5 inline-block" href="http://localhost/blog">Start
-            Reading</a>
-    </div>
-    @endsection
+<x-app-layout title="Blog">
 
-
-    <div class="mb-10 w-full">
-        <div class="mb-16">
-            <h2 class="mt-16 mb-5 text-3xl text-blue-500 font-bold">Featured Posts</h2>
-            <div class="w-full">
-                <div class="grid grid-cols-3 gap-10 w-full">
-                    @foreach ($featuredPosts as $post)
-                    <x-posts.post-card :post="$post" class="col-span-3 md:col-span-1" />
-                    @endforeach
-                </div>
-            </div>
-            <a class="mt-10 block text-center text-lg text-yellow-500 font-semibold" href="http://localhost/blog">More
-                Posts</a>
+    <div class="w-full grid grid-cols-4 gap-10">
+        <div class="md:col-span-3 col-span-4">
+            <livewire:post-list/>
         </div>
-        <hr>
+        <div id="side-bar"
+            class="border-t border-t-gray-100 md:border-t-none col-span-4 md:col-span-1 px-3 md:px-6  space-y-10 py-6 pt-10 md:border-l border-gray-100 h-screen sticky top-0">
 
-        <h2 class="mt-16 mb-5 text-3xl text-blue-500 font-bold">Latest Posts</h2>
-        <div class="w-full mb-5">
-            <div class="grid grid-cols-3 gap-10 w-full">
-                @foreach ($latestPosts as $post)
-                <x-posts.post-card :post="$post" class="col-span-3 md:col-span-1"  />
-                @endforeach
-            </div>
+            @include('posts.partials.search-box')
+
+
+            @include('posts.partials.categories-box')
         </div>
-        <a class="mt-10 block text-center text-lg text-yellow-500 font-semibold" href="http://127.0.0.1:8000/blog">More
-            Posts</a>
     </div>
 
 </x-app-layout>
