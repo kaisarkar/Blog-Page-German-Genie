@@ -40,6 +40,6 @@
             @endforeach
         </div>
 
-        {{-- <livewire:post-comments :key="'comments' . $post->id" :$post /> --}}
+        <livewire:post-comments :key="'comments' . $post->id" :$post />
     </article>
 </x-app-layout>
