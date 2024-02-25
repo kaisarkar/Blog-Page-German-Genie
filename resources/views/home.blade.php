@@ -34,7 +34,7 @@
                 @endforeach
             </div>
         </div>
-        <a class="mt-10 block text-center text-lg text-yellow-500 font-semibold" href="http://127.0.0.1:8000/blog">More
+        <a class="mt-10 block text-center text-lg text-yellow-500 font-semibold" href="http://localhost/blog">More
             Posts</a>
     </div>
 
