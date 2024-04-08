@@ -1,5 +1,5 @@
 <!-- Settings Dropdown -->
-<div class=" flex ms-3 relative">
+<div class=" flex ms-3 relative space-x-4">
     @can('view-admin', App\Models\User::class)
           <x-nav-link :navigate='false' href="{{ route('filament.admin.auth.login') }}" :active="request()->routeIs('filament.admin.auth.login')">
               {{ __('Admin') }}
